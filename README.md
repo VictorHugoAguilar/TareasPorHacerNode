@@ -13,9 +13,10 @@ La ejecutamos luego con el siguiente comando
 node app (comando)
 ```
 
-Ejemplo:
 
+## Ejemplo:
 
+```python
 victorhugo@MacBook-Pro-de-victor TareasPorHacerNode % node app --help
 app [command]
 
@@ -28,3 +29,4 @@ Comandos:
 Opciones:
   --version  Muestra número de versión                                [booleano]
   --help     Muestra ayuda                                            [booleano]
+```
