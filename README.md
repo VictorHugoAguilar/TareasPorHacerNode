@@ -16,3 +16,15 @@ node app (comando)
 Ejemplo:
 
 
+victorhugo@MacBook-Pro-de-victor TareasPorHacerNode % node app --help
+app [command]
+
+Comandos:
+  app crear       Crea una tarea por hacer
+  app listar      Listar las tareas por hacer
+  app actualizar  Actualiza las tareas por hacer
+  app borrar      Borrar una tarea por hacer
+
+Opciones:
+  --version  Muestra número de versión                                [booleano]
+  --help     Muestra ayuda                                            [booleano]
