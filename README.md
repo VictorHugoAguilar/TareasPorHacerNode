@@ -3,16 +3,19 @@
 Este es un ejemplo de aplicación de consola con node
 de tareas por hacer.
 
+## Instalación
+
 ```
 npm install
 ```
+
+## Uso
 
 La ejecutamos luego con el siguiente comando
 
 ```
 node app (comando)
 ```
-
 
 ## Ejemplo:
 
