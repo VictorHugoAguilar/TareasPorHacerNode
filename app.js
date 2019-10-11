@@ -25,13 +25,18 @@ switch (comando) {
         for (let tarea of listado) {
             console.log('====== Tareas por hacer ======'.green);
             console.log(tarea.descripcion);
-            let estado = tarea.completado ? 'Si' : 'No';
+            let estado = tarea.completado === true ? 'Si'.green : 'No'.red;
             console.log('Completado: ' + estado);
             console.log('=============================='.green);
         }
         break;
     case 'actualizar':
-        console.log("Actualizar tareas por hacer");
+        // console.log("Actualizar tareas por hacer");
+        porHacer.actualizar(argv.descripcion, argv.completado) ? console.log("Actualizado".green) : console.log("No se ha podido actualizar".red);
+        break;
+    case 'borrar':
+        // console.log("Borrar registro");
+        porHacer.borrar(argv.descripcion) ? console.log("Borrado".green) : console.log("No se ha podido borrar".red);;
         break;
     default:
         console.log("Comando no reconocido".red);

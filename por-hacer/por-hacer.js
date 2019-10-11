@@ -53,15 +53,54 @@ const actualizar = (descripcion, completado = true) => {
 
     // recorremos la lista de tareas por hacer y devolvemos la posicion con findIndex
     let index = listadoPorHacer.findIndex(tarea => {
+        return tarea.descripcion == descripcion;
+    })
+
+    if (index >= 0) {
+        listadoPorHacer[index].completado = completado;
+        guardarDB();
+        return true;
+    } else {
+        return false;
+    }
+
+}
+
+const borrar = (descripcion) => {
+
+    // cargamos la base de datos en la variable
+    cargarDB();
+
+    // recorremos la lista de tareas por hacer y devolvemos la posicion con findIndex
+    let index = listadoPorHacer.findIndex(tarea => {
         return tarea.descripcion === descripcion;
     })
 
+    // console.log("Se encuentra en la posicion " +index)
 
+    if (index >= 0) {
+
+        let nuevoListadoPorHacer = listadoPorHacer.filter(tarea => {
+            return tarea.descripcion !== descripcion;
+        });
+
+        // si tienen el mismo tamaño no ha borrado nada
+        if (nuevoListadoPorHacer.length === listadoPorHacer.length) {
+            return false;
+        }
+        listadoPorHacer = nuevoListadoPorHacer;
+        guardarDB();
+        return true;
+    } else {
+        return false;
+    }
 
 }
 
 
 module.exports = {
     crear: crear,
-    getListado: getListado
+    getListado: getListado,
+    actualizar: actualizar,
+    borrar: borrar,
 }
