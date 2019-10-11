@@ -1,0 +1,13 @@
+[{
+        "descripcion": "Comer",
+        "completado": true
+    },
+    {
+        "descripcion": "Salir a pasear al perro",
+        "completado": true
+    },
+    {
+        "descripcion": "Ir al super",
+        "completado": false
+    }
+]
