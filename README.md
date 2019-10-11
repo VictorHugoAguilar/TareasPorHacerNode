@@ -1,4 +1,4 @@
-## Aplicación de comandos 
+## App de comandos 
 
 Este es un ejemplo de aplicación de consola con node
 de tareas por hacer.
