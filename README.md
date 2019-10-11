@@ -1,6 +1,4 @@
-AppNode
-
-## Aplicación de comandos de Node de tareas por hacer
+## Aplicación de comandos 
 
 Este es un ejemplo de aplicación de consola con node
 de tareas por hacer.
